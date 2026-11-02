@@ -1,31 +1,31 @@
 
 <a id="readme-top"></a>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/krishujeniya/SNAPTEXT_OCR_FLUTTER)
-![GitHub contributors](https://img.shields.io/github/contributors/krishujeniya/SNAPTEXT_OCR_FLUTTER)
-![GitHub stars](https://img.shields.io/github/stars/krishujeniya/SNAPTEXT_OCR_FLUTTER?style=social)
-![GitHub forks](https://img.shields.io/github/forks/krishujeniya/SNAPTEXT_OCR_FLUTTER?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/krishujeniya/snaptext-ocr)
+![GitHub contributors](https://img.shields.io/github/contributors/krishujeniya/snaptext-ocr)
+![GitHub stars](https://img.shields.io/github/stars/krishujeniya/snaptext-ocr?style=social)
+![GitHub forks](https://img.shields.io/github/forks/krishujeniya/snaptext-ocr?style=social)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER">
+  <a href="https://github.com/krishujeniya/snaptext-ocr">
     <img src="assets/Screenshot from 2024-06-17 11-33-12.png" alt="Logo" width="200px">
   </a>
 
-  <h3 align="center">SNAPTEXT_OCR_FLUTTER</h3>
+  <h3 align="center">snaptext-ocr</h3>
 
   <p align="center">
     A powerful OCR application built with Flutter for extracting text from images.
     <br />
-    <a href="https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/krishujeniya/snaptext-ocr"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER">View Demo</a>
+    <a href="https://github.com/krishujeniya/snaptext-ocr">View Demo</a>
     ·
-    <a href="https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER/issues">Report Bug</a>
+    <a href="https://github.com/krishujeniya/snaptext-ocr/issues">Report Bug</a>
     ·
-    <a href="https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER/issues">Request Feature</a>
+    <a href="https://github.com/krishujeniya/snaptext-ocr/issues">Request Feature</a>
   </p>
 </div>
 
@@ -58,7 +58,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-SNAPTEXT_OCR_FLUTTER is a powerful OCR (Optical Character Recognition) application built with Flutter. It allows users to extract text from images with high accuracy and efficiency.
+snaptext-ocr is a powerful OCR (Optical Character Recognition) application built with Flutter. It allows users to extract text from images with high accuracy and efficiency.
 
 ### Key Features
 
@@ -87,8 +87,8 @@ To get a local copy up and running, follow these steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER.git
-   cd SNAPTEXT_OCR_FLUTTER
+   git clone https://github.com/krishujeniya/snaptext-ocr.git
+   cd snaptext-ocr
    ```
 2. Install dependencies
    ```sh
@@ -121,4 +121,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - [Dart](https://dart.dev/)
 - [Flutter](https://flutter.dev/)
 - [Open Source Community](https://opensource.org/)
-- [Contributors](https://github.com/krishujeniya/SNAPTEXT_OCR_FLUTTER/graphs/contributors)
+- [Contributors](https://github.com/krishujeniya/snaptext-ocr/graphs/contributors)
