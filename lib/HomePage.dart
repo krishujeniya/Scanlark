@@ -38,16 +38,12 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> signOutUser() async {
-    dynamic result = await authService.signOut();
-    if (result == null) {
-      // ignore: use_build_context_synchronously
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
-        ),
-      );
-    }
+    await authService.signOut();
+    if (!mounted) return;
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
   }
 
   // void UserNameDisplay() async {
