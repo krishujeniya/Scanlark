@@ -20,6 +20,8 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool isHiddenPass = true;
+  bool _isSigningIn = false;
+  bool _isSendingReset = false;
   void _tooglePasswordView() {
     setState(() {
       isHiddenPass = !isHiddenPass;
@@ -34,34 +36,36 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-   Future<void> signIn() async {
+  Future<void> signIn() async {
+    if (_isSigningIn) return;
+    setState(() => _isSigningIn = true);
     String email = emailController.text;
     String password = passwordController.text;
 
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
+      await authService.signInWithEmailAndPassword(email, password);
 
       // ignore: use_build_context_synchronously
+      if (!mounted) return;
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => const HomeScreen(),
         ),
       );
-    } catch (e) {
+    } on FirebaseAuthException {
       // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Invalid email or password'),
         ),
       );
+    } finally {
+      if (mounted) setState(() => _isSigningIn = false);
     }
   }
 
-void resetPassword() {
+Future<void> resetPassword() async {
   try {
     
     String email = emailController.text;
@@ -72,7 +76,8 @@ ScaffoldMessenger.of(context).showSnackBar(
                     ),
                   );  } else {
     
-    authService.resetPassword(email);
+    setState(() => _isSendingReset = true);
+    await authService.resetPassword(email);
     ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('Password reset email sent'),
@@ -85,8 +90,17 @@ ScaffoldMessenger.of(context).showSnackBar(
           content: Text('Invalid email'),
         ),
       );
+  } finally {
+    if (mounted) setState(() => _isSendingReset = false);
   }
 }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
 
   @override
@@ -154,7 +168,7 @@ ScaffoldMessenger.of(context).showSnackBar(
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
+                onPressed: _isSigningIn ? null : () {
                   if (_formKey.currentState!.validate()) {
                     signIn();
                   }
@@ -162,11 +176,11 @@ ScaffoldMessenger.of(context).showSnackBar(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange, // Set button background color to orange
                 ),
-                child: const Text('Login', style: TextStyle(color: Colors.black)),
+                child: _isSigningIn ? const CircularProgressIndicator() : const Text('Login', style: TextStyle(color: Colors.black)),
               ),
               const SizedBox(height: 10), // Add some spacing
               TextButton(
-                onPressed: () {
+                onPressed: _isSendingReset ? null : () {
                   resetPassword();
                   
                 },

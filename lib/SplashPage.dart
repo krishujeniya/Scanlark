@@ -1,7 +1,8 @@
 // ignore_for_file: file_names, duplicate_ignore
 import 'package:flutter/material.dart';
+import 'HomePage.dart';
 import 'LoginPage.dart';
-import 'dart:async';
+import 'auth.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,10 +16,13 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) =>  const LoginScreen()),
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => authService.getCurrentUser() == null
+              ? const LoginScreen()
+              : const HomeScreen(),
+        ),
       );
     });
   }

@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'LoginPage.dart';
 import 'auth.dart';
@@ -94,13 +93,10 @@ void recognizeText() async {
 
   final qrTextController = TextEditingController();
   String qrData = "Hello, QR Code!";
-  late GlobalKey qrKey;
-  late QRViewController qrController;
 
   @override
   void initState() {
     super.initState();
-    qrKey = GlobalKey();
   }
 
 
@@ -259,7 +255,6 @@ void recognizeText() async {
                         ),
                         child: QrImageView(
                           data: qrData,
-                          key: qrKey,
                           version: QrVersions.auto,
                           size: 200.0,
                         ),
@@ -298,7 +293,6 @@ void recognizeText() async {
 
   @override
   void dispose() {
-    qrController.dispose();
     super.dispose();
   }
 }
