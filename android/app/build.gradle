@@ -26,6 +26,7 @@ android {
         release {
             // Keep the project's existing local signing behavior for this APK build.
             signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
