@@ -36,14 +36,6 @@ subprojects {
         }
     }
 
-    if (name == 'image_picker_android') {
-        // AGP 9.3 lint crashes in JavaDocParser on this upstream plugin source.
-        tasks.configureEach {
-            if (name == 'lintVitalAnalyzeRelease') {
-                enabled = false
-            }
-        }
-    }
 }
 subprojects {
     project.evaluationDependsOn(':app')
