@@ -32,7 +32,7 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze --no-pub
       - run: flutter test --no-pub
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: resolved-pubspec-lock
           path: pubspec.lock
@@ -54,7 +54,7 @@ jobs:
           java-version: '17'
       - run: flutter pub get
       - run: flutter build apk --release --no-pub
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: snaptext-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk

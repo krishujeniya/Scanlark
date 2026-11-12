@@ -15,6 +15,9 @@ subprojects {
     // requires a namespace and disables BuildConfig for libraries by default.
     plugins.withId('com.android.library') {
         android {
+            // Legacy Flutter plugins hard-code old compile SDKs; their current
+            // AndroidX dependencies require API 34 or newer.
+            compileSdkVersion 36
             if (namespace == null) {
                 def manifestFile = project.file('src/main/AndroidManifest.xml')
                 if (manifestFile.exists()) {
