@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'auth.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'RegistrationPage.dart';
 import 'HomePage.dart';
 
@@ -78,6 +78,7 @@ ScaffoldMessenger.of(context).showSnackBar(
     
     setState(() => _isSendingReset = true);
     await authService.resetPassword(email);
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('Password reset email sent'),
@@ -85,6 +86,7 @@ ScaffoldMessenger.of(context).showSnackBar(
                   );
     }
   } catch (e) {
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Invalid email'),

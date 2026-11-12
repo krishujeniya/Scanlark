@@ -1,6 +1,6 @@
 // ignore_for_file: file_names, duplicate_ignore
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
@@ -75,6 +75,8 @@ void recognizeText() async {
       'timestamp': FieldValue.serverTimestamp(),
     });
   }
+
+  if (!mounted) return;
 
   // Navigate to the ResultPage as before
   // ignore: use_build_context_synchronously

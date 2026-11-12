@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, duplicate_ignore
 
 import 'auth.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'HomePage.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -58,6 +58,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     String email = emailController.text;
     String password = passwordController.text;
     dynamic result = await authService.signUpWithEmailAndPassword(email, password);
+
+    if (!mounted) return;
 
     if (result != null) {
       // ignore: use_build_context_synchronously

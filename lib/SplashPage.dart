@@ -1,5 +1,5 @@
 // ignore_for_file: file_names, duplicate_ignore
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'HomePage.dart';
 import 'LoginPage.dart';
 import 'auth.dart';

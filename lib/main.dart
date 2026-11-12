@@ -1,5 +1,5 @@
 // ignore_for_file: file_names, duplicate_ignore
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'SplashPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
