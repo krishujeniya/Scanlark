@@ -28,9 +28,11 @@ subprojects {
                 buildConfig = true
             }
         }
-        afterEvaluate {
-            // Apply after old Flutter plugins have set their own compile SDK.
-            android.compileSdkVersion 36
+        androidComponents {
+            finalizeDsl { androidDsl ->
+                // Legacy plugins hard-code API 31 despite AndroidX requiring 34+.
+                androidDsl.compileSdk = 36
+            }
         }
     }
 }
