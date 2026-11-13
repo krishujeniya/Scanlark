@@ -5,14 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a1011">
 <meta name="color-scheme" content="dark">
-<title>SnapText · Your image, in words</title>
-<meta name="description" content="Meet SnapText, an open-source Flutter OCR project for turning images into editable text, keeping scan history, and generating QR codes. Explore the app and its source.">
+<title>Scanlark · Your image, in words</title>
+<meta name="description" content="Meet Scanlark, an open-source Flutter OCR project for turning images into editable text, keeping scan history, and generating QR codes. Explore the app and its source.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SnapText · Your image, in words">
-<meta property="og:description" content="A closer look at SnapText, the open-source image-to-text app built with Flutter and Google ML Kit.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a1011'/%3E%3Cpath d='M17 21V16h12M47 43v5H35M17 31v17h12M47 33V16H35' fill='none' stroke='%23cee5d3' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M25 27h14M25 35h11' stroke='%23eff3eb' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:title" content="Scanlark · Your image, in words">
+<meta property="og:description" content="Scanlark turns images into editable text with on-device OCR. Explore the app, its features, and CI-built Android release.">
+<meta property="og:image" content="https://krishujeniya.github.io/Scanlark/assets/scanlark-social-preview.png">
+<link rel="icon" type="image/png" href="assets/scanlark-mark-128.png">
+<link rel="apple-touch-icon" href="assets/scanlark-touch-icon.png">
 <style>
-/* SNAPTEXT DESIGN DECISIONS: single dark editorial theme; text-first OCR narrative; procedural river as source-to-text metaphor; no external media or fake scanning; one mint accent; intentional overrules for sparse tracked section labels and a mint headline word; real product features sourced from Flutter code. */
+/* SCANLARK DESIGN DECISIONS: single dark editorial theme; text-first OCR narrative; procedural river as source-to-text metaphor; no external media or fake scanning; one mint accent; intentional overrules for sparse tracked section labels and a mint headline word; real product features sourced from Flutter code. */
 :root{
   --bg:#0a1011;--surface:#101919;--surface-2:#152120;--paper:#eff3eb;--muted:#a4b0ae;
   --accent:#cee5d3;--accent-dim:rgba(206,229,211,.35);--line:rgba(225,239,232,.15);
@@ -312,7 +314,6 @@ dialog p{font-size:14px}
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
-<symbol id="brand-symbol" viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="11" fill="#152320" stroke="#cee5d366"/><path d="M10 15V10h9M30 25v5h-9M10 22v8h9M30 18v-8h-9" fill="none" stroke="#cee5d3" stroke-width="2.2" stroke-linecap="round"/><path d="M16 18h10M16 23h8" stroke="#eff3eb" stroke-width="2" stroke-linecap="round"/></symbol>
 <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="chevron" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -323,15 +324,15 @@ dialog p{font-size:14px}
 </svg>
 <a class="skip-link" href="#manifesto">Skip to content</a>
 <div class="progress" id="scrollProgress" aria-hidden="true"></div>
-<div class="announcement">SnapText is an open-source Flutter project. <a href="https://github.com/krishujeniya/snaptext-ocr" target="_blank" rel="noopener noreferrer">See the repository</a></div>
+<div class="announcement">Scanlark is an open-source Flutter project. <a href="https://github.com/krishujeniya/Scanlark" target="_blank" rel="noopener noreferrer">See the repository</a></div>
 <header class="site-header" id="header">
  <div class="container nav-row">
-  <a class="brand" href="#top" aria-label="SnapText, back to top"><svg class="brand-mark" aria-hidden="true"><use href="#brand-symbol"/></svg><span>snaptext<span style="color:var(--accent)">.</span></span></a>
+  <a class="brand" href="#top" aria-label="Scanlark, back to top"><img class="brand-mark" src="assets/scanlark-mark-128.png" alt=""><span>scanlark<span style="color:var(--accent)">.</span></span></a>
   <nav class="desktop-nav" aria-label="Main navigation">
    <a href="#features">The app</a><a href="#workflow">How it works</a><a href="#showcase">Screens</a><a href="#get-started">Get started</a><a href="#faq">FAQ</a>
   </nav>
   <div class="nav-actions">
-   <a class="btn btn-outline" href="https://github.com/krishujeniya/snaptext-ocr" target="_blank" rel="noopener noreferrer">View on GitHub <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+   <a class="btn btn-outline" href="https://github.com/krishujeniya/Scanlark" target="_blank" rel="noopener noreferrer">View on GitHub <svg aria-hidden="true"><use href="#arrow"/></svg></a>
    <button class="icon-btn menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><svg aria-hidden="true"><use href="#menu"/></svg></button>
   </div>
  </div>
@@ -340,7 +341,7 @@ dialog p{font-size:14px}
  </nav>
 </header>
 <main id="main">
-<section class="hero" id="top" aria-label="SnapText introduction">
+<section class="hero" id="top" aria-label="Scanlark introduction">
  <div class="hero-sticky">
   <div class="field-fallback" aria-hidden="true"></div>
   <div class="field-wrap" aria-hidden="true"><canvas id="field"></canvas></div>
@@ -349,7 +350,7 @@ dialog p{font-size:14px}
    <div class="hero-intro" id="heroIntro">
     <p class="eyebrow">Image to text, without the retyping</p>
     <h1>Words,<br><span class="italic">unlocked.</span></h1>
-    <p>Snap a photo or choose an image. SnapText turns what it reads into text you can edit, copy, and use.</p>
+    <p>Snap a photo or choose an image. Scanlark turns what it reads into text you can edit, copy, and use.</p>
     <div class="hero-actions"><a class="btn btn-primary" data-magnetic href="#workflow">See how it works <svg aria-hidden="true"><use href="#arrow"/></svg></a><a class="btn btn-outline" href="#showcase">Explore the screens <svg aria-hidden="true"><use href="#arrow"/></svg></a></div>
    </div>
    <div class="hero-next" id="heroNext">
@@ -372,7 +373,7 @@ dialog p{font-size:14px}
  <div class="container">
   <p class="eyebrow reveal">A page has more to give</p>
   <h2 class="reveal">The text you need is already <span class="italic">right there.</span></h2>
-  <p class="lead reveal">In a printed note, a sign, or a saved photo. SnapText gives you a way to bring those words into your next task.</p>
+  <p class="lead reveal">In a printed note, a sign, or a saved photo. Scanlark gives you a way to bring those words into your next task.</p>
   <div class="chip-field" aria-hidden="true">
    <div class="orbit-figure"><svg viewBox="0 0 460 290"><circle cx="230" cy="145" r="109"/><ellipse cx="230" cy="145" rx="180" ry="56" transform="rotate(-24 230 145)"/><path d="M86 200Q230 34 377 105"/></svg></div>
    <span class="float-chip">From a photograph</span><span class="float-chip">Into editable words</span><span class="float-chip">Ready to keep</span>
@@ -381,7 +382,7 @@ dialog p{font-size:14px}
 </section>
 <section class="section" id="features">
  <div class="container">
-  <div class="section-intro reveal"><p class="eyebrow">Inside SnapText</p><h2>Three steps from<br><span class="italic">image to text.</span></h2><p>Built with Flutter and Google ML Kit text recognition. The code in the repository shows how the app captures images, recognizes text, and lets you work with the result.</p></div>
+  <div class="section-intro reveal"><p class="eyebrow">Inside Scanlark</p><h2>Three steps from<br><span class="italic">image to text.</span></h2><p>Built with Flutter and Google ML Kit text recognition. The code in the repository shows how the app captures images, recognizes text, and lets you work with the result.</p></div>
   <div class="bento">
    <article class="feature-card reveal"><span class="feature-number">01 / CAPTURE</span><div class="feature-art"><div class="scan-frame" aria-hidden="true"><div class="scan-sheet"><span></span><span></span><span></span><span></span></div><div class="scan-beam"></div></div></div><h3>Start with an image.</h3><p>Open the camera or pick an existing photo from your gallery.</p></article>
    <article class="feature-card reveal"><span class="feature-number">02 / RECOGNIZE</span><div class="feature-art"><div class="rings" aria-hidden="true"><span class="rings-inner">Aa</span></div></div><h3>Find the words.</h3><p>Google ML Kit reads the image and returns recognized text for the next screen.</p></article>
@@ -416,9 +417,9 @@ dialog p{font-size:14px}
   </div>
  </div>
  <div class="rail-shell">
-  <div class="rail" id="screenRail" role="region" aria-roledescription="carousel" aria-label="Illustrative SnapText screens" tabindex="0">
+  <div class="rail" id="screenRail" role="region" aria-roledescription="carousel" aria-label="Illustrative Scanlark screens" tabindex="0">
    <article class="shot-card" data-category="ocr" role="group" aria-roledescription="slide" aria-label="Image capture view">
-    <div class="shot-art"><div class="phone" aria-hidden="true"><div class="phone-title">SnapText</div><div class="phone-illustration"><svg viewBox="0 0 50 50" width="44" height="44"><rect x="7" y="13" width="36" height="28" rx="3" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="19" cy="22" r="4" fill="currentColor"/><path d="m10 37 11-11 9 9 7-7 4 5" stroke="currentColor" fill="none" stroke-width="2"/></svg></div><div class="phone-actions"><span></span><span></span></div><div class="phone-stroke"></div><div class="phone-stroke short"></div></div></div>
+    <div class="shot-art"><div class="phone" aria-hidden="true"><div class="phone-title">Scanlark</div><div class="phone-illustration"><svg viewBox="0 0 50 50" width="44" height="44"><rect x="7" y="13" width="36" height="28" rx="3" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="19" cy="22" r="4" fill="currentColor"/><path d="m10 37 11-11 9 9 7-7 4 5" stroke="currentColor" fill="none" stroke-width="2"/></svg></div><div class="phone-actions"><span></span><span></span></div><div class="phone-stroke"></div><div class="phone-stroke short"></div></div></div>
     <div class="shot-copy"><p class="example-label">01 / ILLUSTRATIVE</p><h3>Choose your source</h3><p>Camera and gallery entry points make image capture the first step.</p></div>
    </article>
    <article class="shot-card" data-category="ocr" role="group" aria-roledescription="slide" aria-label="Recognized text view">
@@ -445,16 +446,16 @@ dialog p{font-size:14px}
  </div></div>
 </section>
 <section class="section" id="get-started">
- <div class="container"><div class="section-intro reveal"><p class="eyebrow">Open-source project</p><h2>See the code.<br><span class="italic">Run the app.</span></h2><p>SnapText is a Flutter application in a public GitHub repository. This site explains the app; it does not run OCR in your browser.</p></div>
- <div class="install-grid"><article class="install-step reveal"><span class="feature-number">01 / GET THE CODE</span><h3>Clone the repository.</h3><p>Download the source to your development machine.</p></article><article class="install-step reveal"><span class="feature-number">02 / PREPARE</span><h3>Install dependencies.</h3><p>Install Flutter, run <code>flutter pub get</code>, and configure the Firebase services the app uses.</p></article><article class="install-step reveal"><span class="feature-number">03 / RUN</span><h3>Start Flutter.</h3><p>Connect a supported device and use <code>flutter run</code>. Device and plugin support depend on your setup.</p></article></div>
- <div class="command reveal"><code id="cloneCommand">git clone https://github.com/krishujeniya/snaptext-ocr.git</code><button class="icon-btn" id="copyCommand" aria-label="Copy clone command" title="Copy clone command"><svg aria-hidden="true"><use href="#copy"/></svg></button></div>
- <p class="small" style="margin-top:18px">Want implementation details? <a href="https://github.com/krishujeniya/snaptext-ocr/blob/main/README.md" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:underline;text-underline-offset:4px">Read the repository README.</a></p>
+ <div class="container"><div class="section-intro reveal"><p class="eyebrow">Open-source project</p><h2>Explore the code.<br><span class="italic">Get the app.</span></h2><p>Scanlark is a Flutter application in a public GitHub repository. This site explains the app; it does not run OCR in your browser.</p></div>
+ <div class="install-grid"><article class="install-step reveal"><span class="feature-number">01 / CHECK</span><h3>Open the Actions tab.</h3><p>Pull requests and updates to <code>main</code> run the project's automated Flutter checks.</p></article><article class="install-step reveal"><span class="feature-number">02 / BUILD</span><h3>Download the release APK.</h3><p>After a successful run, download the Android APK from its <a href="https://github.com/krishujeniya/Scanlark/actions/workflows/flutter.yml" target="_blank" rel="noopener noreferrer">workflow artifacts</a>.</p></article><article class="install-step reveal"><span class="feature-number">03 / UPDATE</span><h3>Review dependency updates.</h3><p>Dependabot opens pull requests for Flutter packages and GitHub Actions.</p></article></div>
+ <div class="command reveal"><code id="cloneCommand">git clone https://github.com/krishujeniya/Scanlark.git</code><button class="icon-btn" id="copyCommand" aria-label="Copy clone command" title="Copy clone command"><svg aria-hidden="true"><use href="#copy"/></svg></button></div>
+ <p class="small" style="margin-top:18px">Want implementation details? <a href="https://github.com/krishujeniya/Scanlark/blob/main/README.md" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:underline;text-underline-offset:4px">Read the repository README.</a></p>
  </div>
 </section>
 <section class="section" id="faq">
  <div class="container"><div class="section-intro reveal"><p class="eyebrow">A few practical answers</p><h2>Before you <span class="italic">begin.</span></h2></div>
  <div class="faq-list">
-  <div class="faq-item open"><h3><button class="faq-question" id="fq1" aria-expanded="true" aria-controls="fa1">What is SnapText? <span class="faq-plus" aria-hidden="true"></span></button></h3><div class="faq-clip" id="fa1" role="region" aria-labelledby="fq1"><div class="faq-answer"><p>SnapText is an open-source Flutter OCR application. Its source includes camera and gallery image selection, Google ML Kit text recognition, an editable results screen, Firebase-backed history, and a QR generator.</p></div></div></div>
+  <div class="faq-item open"><h3><button class="faq-question" id="fq1" aria-expanded="true" aria-controls="fa1">What is Scanlark? <span class="faq-plus" aria-hidden="true"></span></button></h3><div class="faq-clip" id="fa1" role="region" aria-labelledby="fq1"><div class="faq-answer"><p>Scanlark is an open-source Flutter OCR application. Its source includes camera and gallery image selection, Google ML Kit text recognition, an editable results screen, Firebase-backed history, and a QR generator.</p></div></div></div>
   <div class="faq-item"><h3><button class="faq-question" id="fq2" aria-expanded="false" aria-controls="fa2">Can I upload an image to this website? <span class="faq-plus" aria-hidden="true"></span></button></h3><div class="faq-clip" id="fa2" role="region" aria-labelledby="fq2"><div class="faq-answer"><p>No. This is a static project website hosted through GitHub Pages. The illustrations explain the app's features. OCR runs in the Flutter app rather than on this page.</p></div></div></div>
   <div class="faq-item"><h3><button class="faq-question" id="fq3" aria-expanded="false" aria-controls="fa3">Where does the history go? <span class="faq-plus" aria-hidden="true"></span></button></h3><div class="faq-clip" id="fa3" role="region" aria-labelledby="fq3"><div class="faq-answer"><p>The Flutter code saves recognized text and a timestamp under the signed-in user's record in Cloud Firestore. Review your own Firebase configuration and rules before using the app with personal documents.</p></div></div></div>
   <div class="faq-item"><h3><button class="faq-question" id="fq4" aria-expanded="false" aria-controls="fa4">Can I contribute or report an issue? <span class="faq-plus" aria-hidden="true"></span></button></h3><div class="faq-clip" id="fa4" role="region" aria-labelledby="fq4"><div class="faq-answer"><p>Yes. The repository is public. Browse the source, review its MIT license, and open an issue on GitHub with a reproducible description.</p></div></div></div>
@@ -462,25 +463,25 @@ dialog p{font-size:14px}
 </section>
 <section class="section contact" id="contact">
  <svg class="contact-arcs" viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="130"/><circle cx="400" cy="400" r="210"/><circle cx="400" cy="400" r="290"/><circle cx="400" cy="400" r="380"/></svg>
- <div class="container"><p class="eyebrow reveal">The next step is yours</p><h2 class="reveal">Keep the words.<br><span class="italic">Build the rest.</span></h2><p class="reveal" style="max-width:480px">Explore SnapText's source, run a local copy, or contribute a fix. The repository is the place to start.</p>
-  <div class="contact-links reveal"><a class="btn btn-primary" data-magnetic href="https://github.com/krishujeniya/snaptext-ocr" target="_blank" rel="noopener noreferrer">Explore on GitHub <svg aria-hidden="true"><use href="#arrow"/></svg></a><button class="btn btn-outline" id="aboutPreview">About this website <svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
+ <div class="container"><p class="eyebrow reveal">The next step is yours</p><h2 class="reveal">Keep the words.<br><span class="italic">Build the rest.</span></h2><p class="reveal" style="max-width:480px">Explore Scanlark's source, download a CI-built Android APK, or contribute a fix. The repository is the place to start.</p>
+  <div class="contact-links reveal"><a class="btn btn-primary" data-magnetic href="https://github.com/krishujeniya/Scanlark" target="_blank" rel="noopener noreferrer">Explore on GitHub <svg aria-hidden="true"><use href="#arrow"/></svg></a><button class="btn btn-outline" id="aboutPreview">About this website <svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
  </div>
 </section>
 </main>
 <footer class="footer">
  <div class="container">
-  <div class="footer-grid"><div><a class="brand" href="#top"><svg class="brand-mark" aria-hidden="true"><use href="#brand-symbol"/></svg><span>snaptext<span style="color:var(--accent)">.</span></span></a><p>Your image, in words.</p></div>
-  <nav class="footer-links" aria-label="Footer navigation"><a href="#features">The app</a><a href="#workflow">Workflow</a><a href="#showcase">Screens</a><a href="#faq">FAQ</a><a href="https://github.com/krishujeniya/snaptext-ocr/issues" target="_blank" rel="noopener noreferrer">Issues</a></nav>
-  <div class="footer-tools"><button class="tool-btn" id="copyLogo">Copy logo as SVG</button><button class="tool-btn" id="motionToggle" aria-pressed="true">Motion: On</button></div></div>
-  <div class="footer-bottom"><span>© <span id="year">2026</span> SnapText. Source code under the repository's MIT license.</span><span>Site preview only. No uploads or information are collected here.</span></div>
+  <div class="footer-grid"><div><a class="brand" href="#top"><img class="brand-mark" src="assets/scanlark-mark-128.png" alt=""><span>scanlark<span style="color:var(--accent)">.</span></span></a><p>Your image, in words.</p></div>
+  <nav class="footer-links" aria-label="Footer navigation"><a href="#features">The app</a><a href="#workflow">Workflow</a><a href="#showcase">Screens</a><a href="#faq">FAQ</a><a href="https://github.com/krishujeniya/Scanlark/issues" target="_blank" rel="noopener noreferrer">Issues</a></nav>
+  <div class="footer-tools"><button class="tool-btn" id="copyLogo">Download logo PNG</button><button class="tool-btn" id="motionToggle" aria-pressed="true">Motion: On</button></div></div>
+  <div class="footer-bottom"><span>© <span id="year">2026</span> Scanlark. Source code under the repository's MIT license.</span><span>Site preview only. No uploads or information are collected here.</span></div>
  </div>
 </footer>
 <dialog id="previewDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
  <div class="dialog-head"><p class="eyebrow" style="margin:0">About this website</p><button class="icon-btn" id="closeDialog" aria-label="Close dialog"><svg aria-hidden="true"><use href="#close"/></svg></button></div>
- <h2 id="dialogTitle">A closer look at SnapText.</h2>
+ <h2 id="dialogTitle">A closer look at Scanlark.</h2>
  <p id="dialogDescription">This page is a static, illustrated introduction to the Flutter repository. Screen examples are visual studies. No images are uploaded here, and no OCR, account creation, or QR-generation service runs on this website.</p>
  <p class="status-line" id="dialogStatus" aria-live="polite">The repository contains the working app source.</p>
- <div class="dialog-actions"><a class="btn btn-primary" href="https://github.com/krishujeniya/snaptext-ocr" target="_blank" rel="noopener noreferrer">Open source <svg aria-hidden="true"><use href="#arrow"/></svg></a><button class="btn btn-outline" id="dialogReplay">Replay note</button></div>
+ <div class="dialog-actions"><a class="btn btn-primary" href="https://github.com/krishujeniya/Scanlark" target="_blank" rel="noopener noreferrer">Open source <svg aria-hidden="true"><use href="#arrow"/></svg></a><button class="btn btn-outline" id="dialogReplay">Replay note</button></div>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
@@ -499,8 +500,7 @@ dialog p{font-size:14px}
  byId('year').textContent=String(new Date().getFullYear());
  byId('copyCommand').addEventListener('click',function(){copyValue(byId('cloneCommand').textContent,'Clone command copied')});
  byId('copyLogo').addEventListener('click',function(){
-  var svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="11" fill="#152320" stroke="#cee5d3"/><path d="M10 15V10h9M30 25v5h-9M10 22v8h9M30 18v-8h-9" fill="none" stroke="#cee5d3" stroke-width="2.2" stroke-linecap="round"/><path d="M16 18h10M16 23h8" stroke="#eff3eb" stroke-width="2" stroke-linecap="round"/></svg>';
-  copyValue(svg,'Logo SVG copied');
+  var link=document.createElement('a');link.href='assets/scanlark-mark-128.png';link.download='scanlark-logo.png';link.click();notice('Logo download started');
  });
  var menuToggle=byId('menuToggle'),mobileNav=byId('mobileNav');
  function closeMenu(){mobileNav.hidden=true;menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Open navigation');menuToggle.querySelector('use').setAttribute('href','#menu')}

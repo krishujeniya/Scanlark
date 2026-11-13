@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       
       debugShowCheckedModeBanner: false,
-      title: 'SnapText',
+      title: 'Scanlark',
       theme: ThemeData.dark().copyWith(
        primaryColor: Colors.orange,
         colorScheme:

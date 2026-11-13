@@ -44,40 +44,35 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA-PQ2uh4R4uzO0ppra1CAVPpDi_oEgHDU',
-    appId: '1:549266111975:web:65955eb9227052c6f21142',
-    messagingSenderId: '549266111975',
-    projectId: 'ai-lens-7d908',
-    authDomain: 'ai-lens-7d908.firebaseapp.com',
-    storageBucket: 'ai-lens-7d908.appspot.com',
-    measurementId: 'G-XWM11QFP6K',
+    apiKey: 'AIzaSyDcBs0jJbct5XE_YVxu4irr7QGp1hI6_kA',
+    appId: '1:531026381510:web:74a50675359c1b531225c7',
+    messagingSenderId: '531026381510',
+    projectId: 'scanlark-ocr-krishujeniya',
+    authDomain: 'scanlark-ocr-krishujeniya.firebaseapp.com',
+    storageBucket: 'scanlark-ocr-krishujeniya.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDskKsnVrPfR_h3j4mLqnL78ZmicWVZ1F4',
-    appId: '1:549266111975:android:4ba47bd15a3f0f21f21142',
-    messagingSenderId: '549266111975',
-    projectId: 'ai-lens-7d908',
-    storageBucket: 'ai-lens-7d908.appspot.com',
+    apiKey: 'AIzaSyCPuZ6JPrZsuhzernnb7KpykWRK1Pwu8Nw',
+    appId: '1:531026381510:android:34be432dbd4142691225c7',
+    messagingSenderId: '531026381510',
+    projectId: 'scanlark-ocr-krishujeniya',
+    storageBucket: 'scanlark-ocr-krishujeniya.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBCNOgAZS0xreQsuYCpXfemrQYaSEeIemI',
-    appId: '1:549266111975:ios:dcff6b1776e47979f21142',
-    messagingSenderId: '549266111975',
-    projectId: 'ai-lens-7d908',
-    storageBucket: 'ai-lens-7d908.appspot.com',
-    iosClientId: '549266111975-duvlaav2rc1l2kcq7q68k7nhsfkb0lth.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDlHaih3oZFT_BE1AXpgH9kxZFzTziivcM',
+    appId: '1:531026381510:ios:4694b276704d3ce71225c7',
+    messagingSenderId: '531026381510',
+    projectId: 'scanlark-ocr-krishujeniya',
+    storageBucket: 'scanlark-ocr-krishujeniya.firebasestorage.app',
     iosBundleId: 'com.example.snaptext',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBCNOgAZS0xreQsuYCpXfemrQYaSEeIemI',
-    appId: '1:549266111975:ios:0687fd26a9cef0fff21142',
-    messagingSenderId: '549266111975',
-    projectId: 'ai-lens-7d908',
-    storageBucket: 'ai-lens-7d908.appspot.com',
-    iosClientId: '549266111975-p80s2qerj40igjme446d44hf80p1g56p.apps.googleusercontent.com',
-    iosBundleId: 'com.example.snaptext.RunnerTests',
+    apiKey: 'AIzaSyDlHaih3oZFT_BE1AXpgH9kxZFzTziivcM',
+    appId: '1:531026381510:ios:4694b276704d3ce71225c7',
+    messagingSenderId: '531026381510',
+    projectId: 'scanlark-ocr-krishujeniya',
+    storageBucket: 'scanlark-ocr-krishujeniya.firebasestorage.app',
+    iosBundleId: 'com.example.snaptext',
   );
 }

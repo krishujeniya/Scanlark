@@ -1,11 +1,11 @@
 {
-    "name": "snaptext",
-    "short_name": "snaptext",
+    "name": "Scanlark",
+    "short_name": "Scanlark",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#071225",
+    "theme_color": "#071225",
+    "description": "Scanlark turns images into editable text with on-device OCR.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

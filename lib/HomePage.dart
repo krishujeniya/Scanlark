@@ -103,7 +103,7 @@ void recognizeText() async {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text('SnapText', style: TextStyle(color: Colors.black)),
+        title: const Text('Scanlark', style: TextStyle(color: Colors.black)),
         backgroundColor: Colors.orange,
         actions: [
           IconButton(

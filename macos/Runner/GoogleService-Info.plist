@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string>549266111975-p80s2qerj40igjme446d44hf80p1g56p.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.549266111975-p80s2qerj40igjme446d44hf80p1g56p</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBCNOgAZS0xreQsuYCpXfemrQYaSEeIemI</string>
+	<string>AIzaSyDlHaih3oZFT_BE1AXpgH9kxZFzTziivcM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>549266111975</string>
+	<string>531026381510</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.snaptext.RunnerTests</string>
+	<string>com.example.snaptext</string>
 	<key>PROJECT_ID</key>
-	<string>ai-lens-7d908</string>
+	<string>scanlark-ocr-krishujeniya</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ai-lens-7d908.appspot.com</string>
+	<string>scanlark-ocr-krishujeniya.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:549266111975:ios:0687fd26a9cef0fff21142</string>
+	<string>1:531026381510:ios:4694b276704d3ce71225c7</string>
 </dict>
 </plist>
