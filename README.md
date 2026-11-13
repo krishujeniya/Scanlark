@@ -82,9 +82,9 @@ workflow. The workflow enforces `pubspec.lock` and uploads the Android release
 APK as a downloadable artifact when the build succeeds. Start a run from the
 repository's **Actions** tab to request a manual build.
 
-Dependency and GitHub Actions updates are proposed automatically as Dependabot
-pull requests. Review and merge those pull requests to update the committed
-lockfile and workflow versions.
+The repository uses a single `main` branch. Dependency and workflow updates
+must be reviewed and committed directly to `main`; automated update pull
+requests are disabled so they cannot create additional branches.
 
 ## Production site
 
