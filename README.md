@@ -78,9 +78,10 @@ Scanlark is an OCR application built with Flutter. It extracts text from images 
 
 GitHub Actions is the supported place to resolve dependencies, analyze, test,
 and build this project. Pull requests and pushes to `main` run the Flutter
-workflow. The workflow enforces `pubspec.lock` and uploads the Android release
-APK as a downloadable artifact when the build succeeds. Start a run from the
-repository's **Actions** tab to request a manual build.
+workflow. It enforces `pubspec.lock`; after analysis, tests, and the APK build
+pass on `main`, it publishes a versioned [GitHub Release](https://github.com/krishujeniya/Scanlark/releases/latest)
+with the Android APK. The workflow artifact remains available for 14 days.
+Start a run from the repository's **Actions** tab to request a manual build.
 
 The repository uses a single `main` branch. Dependency and workflow updates
 must be reviewed and committed directly to `main`; automated update pull
@@ -102,13 +103,12 @@ restricts history reads and creates to that user.
 <!-- USAGE -->
 ## Usage
 
-1. Open the latest successful run in the repository's [Flutter CI workflow](https://github.com/krishujeniya/Scanlark/actions/workflows/flutter.yml).
-2. Download the `scanlark-release-apk` artifact and install it on an Android device.
-3. Sign in or create an account with email and password.
-4. Capture a new image or choose one from the gallery. Review the recognized text, then copy, share, or create a QR code from it.
-5. Revisit saved scans from History. Records are stored in the signed-in user's Firestore history.
+1. Download the APK from [the latest GitHub Release](https://github.com/krishujeniya/Scanlark/releases/latest) and install it on an Android device.
+2. Sign in or create an account with email and password.
+3. Capture a new image or choose one from the gallery. Review the recognized text, then copy, share, or create a QR code from it.
+4. Revisit saved scans from History. Records are stored in the signed-in user's Firestore history.
 
-The APK is a temporary GitHub Actions artifact, not a Play Store release.
+This is a GitHub Release APK, not a Play Store release.
 
 <!-- LICENSE -->
 ## License
