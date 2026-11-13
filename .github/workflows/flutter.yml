@@ -32,7 +32,7 @@ jobs:
       - run: flutter pub get --enforce-lockfile
       - run: flutter analyze --no-pub
       - run: flutter test --no-pub
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: resolved-pubspec-lock
           path: pubspec.lock
@@ -54,7 +54,7 @@ jobs:
           java-version: '21'
       - run: flutter pub get --enforce-lockfile
       - run: flutter build apk --release --no-pub
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: scanlark-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
