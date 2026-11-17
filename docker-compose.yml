@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scanlark_web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:80/healthz"]
+      interval: 20s
+      timeout: 3s
+      retries: 3
+    networks:
+      - scanlark-net
+
+networks:
+  scanlark-net:
+    driver: bridge

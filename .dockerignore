@@ -1,0 +1,30 @@
+# Version control
+.git/
+.gitignore
+.github/
+
+# Flutter & Dart caches and builds
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+*.lock
+
+# Mobile platform builds
+android/
+ios/
+linux/
+macos/
+windows/
+
+# Sensitive credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+google-services.json
+GoogleService-Info.plist
+
+# OS files
+.DS_Store
