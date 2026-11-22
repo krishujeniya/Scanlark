@@ -21,7 +21,7 @@
     <a href="https://github.com/krishujeniya/Scanlark"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://scanlark-web.pages.dev">Production Site</a>
+    <a href="https://scanlark.pages.dev">Production Site</a>
     ·
     <a href="https://github.com/krishujeniya/Scanlark/actions">Download CI Build</a>
     ·
@@ -89,7 +89,7 @@ requests are disabled so they cannot create additional branches.
 
 ## Production site
 
-[Scanlark on GitHub Pages](https://scanlark-web.pages.dev) is published
+[Scanlark](https://scanlark.pages.dev) is published
 from the `main` branch root. Changes pushed to `main` trigger the Pages
 deployment. The site introduces the app; OCR runs in the Flutter application.
 
