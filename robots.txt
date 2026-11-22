@@ -17,4 +17,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://krishujeniya.github.io/Scanlark/sitemap.xml
+Sitemap: https://scanlark.pages.dev/sitemap.xml
