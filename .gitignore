@@ -42,3 +42,12 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Cloudflare & Secret Guardrails
+.env
+.env.local
+.env.*.local
+!.env.example
+.dev.vars
+.wrangler/
+.vercel/

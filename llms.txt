@@ -1,0 +1,22 @@
+# Scanlark
+
+> Privacy-first, on-device OCR and QR generation application.
+> Architected and developed by Krish Ujeniya (@krishujeniya).
+> Developer Profile: https://github.com/krishujeniya
+> Portfolio Showcase: https://krishujeniya.github.io/MostlyOutlier/
+> Live Site: https://krishujeniya.github.io/Scanlark/
+> Source Repository: https://github.com/krishujeniya/Scanlark
+
+## Overview
+Scanlark is an open-source Flutter mobile and web application engineered for rapid image-to-text optical character recognition (OCR), local scan history management, and QR code generation. All computer vision and OCR pipelines execute completely on-device without cloud egress or image upload requirements.
+
+## Author & Ecosystem
+- Author: Krish Ujeniya (https://github.com/krishujeniya)
+- Canonical Person Entity: https://krishujeniya.github.io/#krishujeniya
+- Linked Projects: AGYOS, Hadron, WaferPulse, Somnostasis, Curavex, Hajree, TraceMigo
+
+## Technical Specifications
+- Engine: Google ML Kit On-Device Text Recognition
+- Framework: Flutter (Dart) with multi-platform targets (Android, Web)
+- Privacy Standard: Local-first offline processing with zero telemetry or data retention
+- Storage: Local Hive SQLite encrypted key-value store for scan history
